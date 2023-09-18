@@ -1,0 +1,63 @@
+.floating-sidebar {
+  position: fixed;
+  left: 0px; 
+  top: 65px;  
+  width: 150px;  /* Increase width */
+  background-color: #007bffe4;
+  color: rgb(251, 246, 246);
+  border-radius: 0px;  /* Increase border-radius */
+  box-shadow: 2px 2px 12px rgba(3, 3, 3, 0.2);
+  z-index: 1000;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu-item {
+  padding: 20px;  /* Increase padding */
+  text-align: center;
+  font-size: 18px;  /* Increase font size */
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-menu-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar-menu-item.active a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-toggle-button {
+  position: fixed;
+  z-index: 1001;
+  left: 5px;
+  top: -10px;
+  font-size: 32px;  /* Increase font size */
+  cursor: pointer;
+  background-color: #007bffea;
+  color: #333;
+  border: none;
+  padding: 20px;  /* Increase padding */
+  border-radius: 10px;  /* Increase border-radius */
+  transform: rotate(270deg);
+  transition: background-color 0.3s ease;
+}
+.logo{
+  text-decoration: none;
+}
+.no-underline {
+  text-decoration: none;
+}
+.sidebar-menu-item i {
+  margin-right: 10px; /* Adds spacing between the icon and the text */
+}

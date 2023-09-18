@@ -1,0 +1,44 @@
+/* Introduction.css */
+
+.intro-container {
+  background: no-repeat center center fixed; /* Add a cool skateboarding background image */
+  background-size: cover;
+  color: white;
+  padding: 100px 0;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 1;
+  padding: 20px;
+  font-family: 'Rock Salt', cursive; /* Add a cool, handwritten-like font */
+}
+
+.intro-text h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.intro-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.intro-image img {
+  max-width: 60%;
+  border: 5px solid white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}

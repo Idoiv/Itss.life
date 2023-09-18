@@ -1,0 +1,14 @@
+.footer-container {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    bottom: -1;
+    width: 100%;
+  }
+  
+  .footer-link {
+    color: #fff;
+  }
+  
