@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="footer-container">
         <p>© 2023 Itss.life. All rights reserved</p> 
       <p>Built by Ido Ivry</p>
-      <a href="https://www.linkedin.com/in/your-linkedin-id/" target="_blank" rel="noopener noreferrer" className="footer-link">
+      <a href="https://www.linkedin.com/in/ido-ivry/" target="_blank" rel="noopener noreferrer" className="footer-link">
         <FontAwesomeIcon icon={faLinkedin} size="2x" />
       </a>
       
