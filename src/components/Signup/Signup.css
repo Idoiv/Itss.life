@@ -86,3 +86,7 @@ h1 {
 .popup-button:hover {
   background-color: #0056b3;
 }
+.error-text {
+  color: red;
+  font-size: 12px;
+}
