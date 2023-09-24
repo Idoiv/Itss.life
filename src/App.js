@@ -1,49 +1,42 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from 'react-router-dom';
-import Introduction from './components/Introduction/Introduction';
-import Courses from './components/Courses/Courses';
-import EpicMoments from './components/EpicMoments/EpicMoments';
-import Faq from './components/Faq/Faq';
-import OutlineWrapper from './components/OutlineWrapper/OutlineWrapper';
-import './App.css';
-import Signup from './components/Signup/Signup';
-import FloatingButton from './components/FloatingButton/FloatingButton';
-import 'font-awesome/css/font-awesome.min.css';  // Make sure this path is correct
-import { useState, useEffect } from 'react';
-import MainPage from './components/MainPage/MainPage';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import './i18n'; // your i18n config file
-import { LanguageProvider } from './LanguageContext';
+import Faq from './components/Faq/Faq';
+import Introduction from './components/Introduction/Introduction';
+import MainPage from './components/MainPage/MainPage';
+import { LanguageProvider, useLanguage } from './LanguageContext';
+import Contact from './components/Signup/Signup';
+
+function LanguageWrapper() {
+  const { lang } = useParams();
+  const { setLanguage } = useLanguage();
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    setLanguage(lang);
+    i18n.changeLanguage(lang);
+  }, [lang, setLanguage, i18n]);
+
+  return (
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="faq" element={<Faq />} />
+      <Route path="aboutme" element={<Introduction />} />
+      <Route path="signup" element={<Contact />} />
+    </Routes>
+  );
+}
 
 function App() {
- 
-  
   return (
     <LanguageProvider>
-    <Router>
-      <div className="App">
-       <Navbar/> {/* Show sidebar only if isSidebarOpen is true */}
-        <FloatingButton />
+      <Router>
+        <Navbar />
         <Routes>
-          <Route path="/" element={
-            <>
-              <MainPage />
-              <OutlineWrapper><Courses /></OutlineWrapper>
-              <OutlineWrapper><EpicMoments /></OutlineWrapper>
-            </>
-          } />
-          <Route path="/faq" element={<OutlineWrapper><Faq /></OutlineWrapper>} />
-          <Route path="/signup" element={<OutlineWrapper><Signup /></OutlineWrapper>} />
-          <Route path="/aboutme" element={<OutlineWrapper><Introduction /></OutlineWrapper>} />
+          <Route path="/:lang/*" element={<LanguageWrapper />} />
         </Routes>
-       <Footer />
-      </div>
-    </Router>
+      </Router>
     </LanguageProvider>
   );
 }

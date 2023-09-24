@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 import { useLanguage } from '../../LanguageContext';  // adjust the path accordingly
 
-
-
 const navItems = [
   { label: 'home_title', link: '/' },
-  { label: 'signup', link: '/signup' },  // You can replace this with a translation key
+  { label: 'signup', link: '/signup' },
   { label: 'about_me_title', link: '/aboutme' },
-  { label: 'reviews', link: '/reviews' },  // You can replace this with a translation key
+  { label: 'reviews', link: '/reviews' },
   { label: 'faq_title', link: '/faq' },
 ];
 
@@ -24,7 +22,6 @@ const Navbar = () => {
     i18n.changeLanguage(newLang);
   };
 
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -33,7 +30,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-container">
         <div className="navbar-left">
-          <a href="/">
+          <a href={`/${language}`}>
             <img src="/favicon.ico" alt="Company" className="navbar-logo" />
           </a>
         </div>
@@ -42,7 +39,7 @@ const Navbar = () => {
             {navItems.map((item, index) => (
               <li key={index} className="navbar-item">
                 <a
-                  href={item.link}
+                  href={`/${language}${item.link}`}
                   target={item.external ? '_blank' : '_self'}
                   className="navbar-link"
                 >
