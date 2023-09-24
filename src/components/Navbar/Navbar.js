@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
-import logo from '../../logo.svg';  // Update this path
-
 
 const navItems = [
   { label: 'Home', link: '/' },
@@ -12,32 +10,40 @@ const navItems = [
 ];
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="navbar">
       <div className="navbar-container">
         <div className="navbar-left">
           <a href="/">
-          <img src="/favicon.ico" alt="Company" className="navbar-logo" />
+            <img src="/favicon.ico" alt="Company" className="navbar-logo" />
           </a>
         </div>
         <div className="navbar-center">
-          <nav>
-            <ul className="navbar-list">
-              {navItems.map((item, index) => (
-                <li key={index} className="navbar-item">
-                  <a
-                    href={item.link}
-                    target={item.external ? '_blank' : '_self'}
-                    className="navbar-link"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <nav className={isMenuOpen ? "navbar-list active" : "navbar-list"}>
+            {navItems.map((item, index) => (
+              <li key={index} className="navbar-item">
+                <a
+                  href={item.link}
+                  target={item.external ? '_blank' : '_self'}
+                  className="navbar-link"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </nav>
         </div>
-        <div className="navbar-right"></div>
+        <div className="navbar-right">
+          <button className="menu-icon" onClick={toggleMenu}>
+            <i className="fa fa-bars"></i>
+          </button>
+        </div>
       </div>
     </div>
   );

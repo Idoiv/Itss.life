@@ -1,3 +1,4 @@
+/* Existing styles */
 .contact-form-container {
   padding: 20px;
   border-radius: 1px;
@@ -7,23 +8,25 @@
   align-content: space-around;
   background-color: #2f2e2b;
 }
-.contact-container{
+
+.contact-container {
   background-color: #337b93;
   background-size: cover;
-  background: no-repeat center center fixed; /* Add a cool skateboarding background image */
+  background: no-repeat center center fixed; 
   color: white;
   padding: 100px 0;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 h1 {
   color: #f9f8f8;
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 20px;
 }
 
 .form-group {
   margin-bottom: 15px;
+  font-size: 20px;
 }
 
 .form-group label {
@@ -52,6 +55,7 @@ h1 {
 .btn-primary:hover {
   background-color: #0056b3;
 }
+
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -86,7 +90,29 @@ h1 {
 .popup-button:hover {
   background-color: #0056b3;
 }
+
 .error-text {
   color: red;
   font-size: 12px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .contact-form-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .contact-container {
+    padding: 50px 0;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 }

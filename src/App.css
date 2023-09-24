@@ -1,39 +1,68 @@
+/* Global Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f2f2f2; /* Light grey background */
-  color: #333;  /* Dark grey text */
+  background-color: #f2f2f2;
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
+/* Component Styles */
+
+/* Outline Wrapper */
 .outline {
   border: 1px solid #ccc;
   margin: 20px;
   padding: 20px;
   border-radius: 8px;
-  background-color: white;  /* White background for each component */
+  background-color: white;
 }
 
-
-
-
+/* Navbar */
 .navbar {
-  background-color: #2e2e2e; /* Dark background */
-  color: white; /* White text */
+  background-color: #2e2e2e;
+  color: white;
   display: flex;
-  justify-content: space-around; /* Distributes items evenly */
-  padding: 5px 5px; /* Some padding for good measure */
-  align-content: flex;
+  justify-content: space-around;
+  padding: 5px 5px;
+  align-items: center;
 }
+
+/* Sidebar Toggle Button */
 .sidebar-toggle-button {
   position: fixed;
-  z-index: 1001; /* Make sure it appears above the sidebar */
+  z-index: 1001;
   left: 20px;
   top: 20px;
   font-size: 24px;
   cursor: pointer;
 }
 
+/* Media Queries for Mobile Responsiveness */
 
+@media (max-width: 768px) {
+  /* Body */
+  body {
+    padding: 5px;
+  }
 
+  /* Outline */
+  .outline {
+    margin: 10px;
+    padding: 15px;
+  }
 
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  /* Sidebar Toggle Button */
+  .sidebar-toggle-button {
+    left: 10px;
+    top: 10px;
+    font-size: 18px;
+  }
+}

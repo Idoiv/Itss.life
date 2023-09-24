@@ -1,11 +1,9 @@
-// Introduction.js
-
 import React from 'react';
 import './Introduction.css';
 
 const Introduction = () => {
   return (
-    <div className="intro-container" style={{ backgroundImage: "url('/venicesunset.jpg')",  backgroundSize: '100%'  }}>
+    <div className="intro-container" style={{ backgroundImage: "url('/venicesunset.jpg')", backgroundSize: 'cover' }}>
       <div className="intro-content">
         <div className="intro-text">
           <h1>About Me</h1>

@@ -1,7 +1,5 @@
-/* Introduction.css */
-
 .intro-container {
-  background: no-repeat center center fixed; /* Add a cool skateboarding background image */
+  background: no-repeat center center fixed;
   background-size: cover;
   color: white;
   padding: 100px 0;
@@ -18,7 +16,7 @@
 .intro-text {
   flex: 1;
   padding: 20px;
-  font-family: 'Rock Salt', cursive; /* Add a cool, handwritten-like font */
+  font-family: 'Rock Salt', cursive;
 }
 
 .intro-text h1 {
@@ -41,4 +39,20 @@
   border: 5px solid white;
   border-radius: 50%;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .intro-container {
+    padding: 50px 0;
+  }
+  .intro-text h1 {
+    font-size: 3rem;
+  }
+  .intro-text p {
+    font-size: 1rem;
+  }
+  .intro-image img {
+    max-width: 50%;
+  }
 }

@@ -1,66 +1,84 @@
 /* The main section containing skate-surfing content */
 .skate-surfing-section {
-    background-image: url('/public/DSC02111.jpeg'); /* Add your background image here */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.6); /* Fallback background color */
-    color: white;
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    min-height: 1200px;
-    display: flex;
-   flex-direction: column;
-   justify-content: center;  /* Align items vertically in the center */
-   align-items: center;  
-  }
-  
-  /* Header styling */
-  .skate-surfing-section h1 {
-    font-size: 3rem;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px; 
-    font-weight: bold;  /* Bolder text */
-  color: #333; 
-  }
+  background-image: url('/public/DSC02111.jpeg'); /* Add your background image here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.6); /* Fallback background color */
+  color: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-height: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .skate-surfing-section h1,
 .skate-surfing-section p {
   background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
   padding: 10px;
   border-radius: 5px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Text shadow */
-  color: #333;  /* Dark grey, which contrasts well with both black and white */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #333;
 }
+
+/* Header styling */
+.skate-surfing-section h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+/* Paragraph styling */
+.skate-surfing-section p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+/* Button styling */
+.skate-surfing-section button {
+  background-color: #24ad31e0;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.skate-surfing-section button:hover {
+  background-color: #ff8f42;
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+  .skate-surfing-section {
+    padding: 20px;
+    min-height: 600px;
+  }
   
-  /* Paragraph styling */
+  .skate-surfing-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
   .skate-surfing-section p {
-    font-size: 1.4rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px; 
-    font-weight: 600;  /* Semi-bold text */
-    color: #333; 
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
-  
-  /* Button styling */
+
   .skate-surfing-section button {
-    background-color: #24ad31e0;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 50px;  /* Rounded corners */
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    padding: 10px 20px;
+    font-size: 1rem;
   }
-  
-  /* Hover effect for the button */
-  .skate-surfing-section button:hover {
-    background-color: #ff8f42;
-  }
-  
+}

@@ -5,7 +5,7 @@
 
 .navbar-container {
   display: flex;
-  justify-content: space-between; /* Added this line */
+  justify-content: space-between;
   align-items: center;
   height: 100%;
   padding: 0 40px;
@@ -17,7 +17,7 @@
 }
 
 .navbar-center {
-  flex: 1; /* Take up remaining space */
+  flex: 1;
   text-align: center;
 }
 
@@ -28,7 +28,7 @@
 
 .navbar-list {
   display: flex;
-  justify-content: center; /* Center the items */
+  justify-content: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -43,4 +43,45 @@
   font-weight: 600;
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
+}
+
+/* Menu icon styling */
+.menu-icon {
+  display: none;
+  color: #ffffff;  /* Match the text color */
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 20px; /* Reduced padding */
+  }
+
+  .navbar-left,
+  .navbar-right {
+    width: auto;  /* Adjust to the content */
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 70px;  /* Height of the navbar */
+    left: 0;
+    background-color: rgba(78, 99, 118, 0.871);
+  }
+
+  .navbar-list.active {
+    display: flex;
+  }
+
+  .navbar-item {
+    padding: 10px 0;  /* More vertical padding, no horizontal padding */
+  }
 }
