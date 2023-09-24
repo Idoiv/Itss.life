@@ -18,11 +18,13 @@ import MainPage from './components/MainPage/MainPage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import './i18n'; // your i18n config file
+import { LanguageProvider } from './LanguageContext';
 
 function App() {
  
   
   return (
+    <LanguageProvider>
     <Router>
       <div className="App">
        <Navbar/> {/* Show sidebar only if isSidebarOpen is true */}
@@ -42,6 +44,7 @@ function App() {
        <Footer />
       </div>
     </Router>
+    </LanguageProvider>
   );
 }
 
