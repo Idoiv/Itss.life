@@ -38,9 +38,10 @@ const Navbar = () => {
           <nav className={isMenuOpen ? "navbar-list active" : "navbar-list"}>
             {navItems.map((item, index) => (
               <li key={index} className="navbar-item">
-                <a
-                  href={`/${language}${item.link}`}
-                  target={item.external ? '_blank' : '_self'}
+                <a 
+                  href={`/${language}${item.link}`} 
+                  target={item.external ? '_blank' : '_self'} 
+                  rel="noreferrer" 
                   className="navbar-link"
                 >
                   {t(item.label)}

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar/Navbar';
 import Faq from './components/Faq/Faq';
@@ -34,6 +34,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
+          <Route path="/" element={<Navigate to="/en" />} /> {/* Redirect root to /en */}
           <Route path="/:lang/*" element={<LanguageWrapper />} />
         </Routes>
       </Router>
