@@ -17,6 +17,7 @@ import { useState, useEffect } from 'react';
 import MainPage from './components/MainPage/MainPage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import './i18n'; // your i18n config file
 
 function App() {
  

@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import './MainPage.css';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';  // Import useTranslation hook
 
 const MainPage = () => {
+  const { t } = useTranslation();  // Initialize the hook
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);  // State for loading page
 
@@ -20,14 +22,12 @@ const MainPage = () => {
   return (
     <div className="main-page">
       <div className="skate-surfing-section">
-        <h1>Experience the Thrill of Skate-Surfing!</h1>
+        <h1>{t('experience_thrill')}</h1>
         <p>
-          Imagine the wind rushing past you as you carve your way through the streets. 
-          Feel the adrenaline pumping as you perform tricks you've only dreamed of. 
-          That's the magic of skate-surfing, and we want you to experience it.
+          {t('skate_surfing_description')}
         </p>
         <button onClick={() => {navigate('/signup')}}>
-          Schedule a Session
+          {t('schedule_session')}
         </button>
       </div>
       {/* Other sections */}
