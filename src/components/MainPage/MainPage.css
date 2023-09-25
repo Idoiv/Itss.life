@@ -60,25 +60,36 @@
   background-color: #ff8f42;
 }
 
-/* Mobile responsive design */
+/* Additional styles for right-to-left languages */
+[dir="rtl"] .skate-surfing-section {
+  text-align: right; /* Right alignment for right-to-left languages */
+}
+
+[dir="rtl"] .skate-surfing-section h1,
+[dir="rtl"] .skate-surfing-section p {
+  text-align: right;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
   .skate-surfing-section {
     padding: 20px;
-    min-height: 600px;
+    min-height: 600px; /* Adjust according to your needs */
   }
-  
+
   .skate-surfing-section h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Reduced font size */
+    margin-bottom: 15px; /* Reduced margin */
   }
 
   .skate-surfing-section p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 1rem; /* Reduced font size */
+    line-height: 1.4; /* Reduced line height */
+    margin-bottom: 15px; /* Reduced margin */
   }
 
   .skate-surfing-section button {
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 10px 20px; /* Reduced padding */
+    font-size: 1rem; /* Reduced font size */
   }
 }

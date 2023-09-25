@@ -7,6 +7,7 @@
   margin: 0 auto;
   align-content: space-around;
   background-color: #2f2e2b;
+  text-align: left; /* Default for left-to-right languages */
 }
 
 .contact-container {
@@ -96,23 +97,46 @@ h1 {
   font-size: 12px;
 }
 
-/* Media queries for responsiveness */
 @media (max-width: 768px) {
   .contact-form-container {
     max-width: 100%;
     padding: 15px;
+    box-shadow: none;
   }
 
   .contact-container {
-    padding: 50px 0;
+    padding: 40px 10px;
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+    font-size: 18px;
   }
 
   .btn-primary {
     padding: 8px 16px;
     font-size: 14px;
   }
+
+  .form-control {
+    padding: 8px;
+  }
+
+  .popup-content {
+    padding: 15px;
+  }
+
+  .popup-button {
+    padding: 8px 16px;
+  }
+}
+
+/* Additional styles for right-to-left languages */
+
+[dir="rtl"] .contact-form-container {
+  text-align: right; /* Right alignment for right-to-left languages */
 }

@@ -1,36 +1,50 @@
+// MainPage.js
+
 import React, { useState, useEffect } from 'react';
 import LoadingPage from '../LoadingPage/LoadingPage';
+import EpicMoments from '../EpicMoments/EpicMoments';  // Import EpicMoments
+import Courses from '../Courses/Courses';  // Import Courses
+import Footer from '../Footer/Footer';  // Import Footer
 import './MainPage.css';
 import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';  // Import useTranslation hook
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../../LanguageContext';  // adjust the path accordingly
+import OutlineWrapper from '../OutlineWrapper/OutlineWrapper';  // Import OutlineWrapper
 
 const MainPage = () => {
-  const { t } = useTranslation();  // Initialize the hook
+  const { t } = useTranslation();
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);  // State for loading page
+  const [isLoading, setIsLoading] = useState(true);
+
+  const { language } = useLanguage(); // Fetch the language from context or state
+
+  const direction = (language === 'he' || language === 'ar') ? 'rtl' : 'ltr';  // Add more right-to-left languages if needed
 
   useEffect(() => {
-    // Simulate the loading time of your app
     setTimeout(() => {
-      setIsLoading(false);  // Hide loading page after 3 seconds
+      setIsLoading(false);
     }, 3000);
   }, []);
-  
+
   if (isLoading) {
     return <LoadingPage />;
   }
+
+
   return (
-    <div className="main-page">
-      <div className="skate-surfing-section">
+    <div className="main-page" dir={direction}>
+      <div className="skate-surfing-section" dir={direction}>
         <h1>{t('experience_thrill')}</h1>
-        <p>
-          {t('skate_surfing_description')}
-        </p>
-        <button onClick={() => {navigate('/signup')}}>
+        <p>{t('skate_surfing_description')}</p>
+        <button onClick={() => {navigate(`/${language}/signup`)}}>
           {t('schedule_session')}
         </button>
       </div>
-      {/* Other sections */}
+      
+      {/* With OutlineWrapper */}
+      <OutlineWrapper><EpicMoments /></OutlineWrapper>
+      <Footer />
+      
     </div>
   );
 };

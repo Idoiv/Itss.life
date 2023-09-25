@@ -51,30 +51,36 @@
   color: #ffffff;  /* Match the text color */
 }
 
-/* Mobile responsive design */
 @media (max-width: 768px) {
   .navbar-container {
-    padding: 0 20px; /* Reduced padding */
+    flex-direction: column;  /* Stack elements vertically */
+    padding: 0 20px;
   }
 
-  .navbar-left,
+  .navbar-left, .navbar-right, .navbar-center {
+    width: 100%;  /* Make it full width */
+  }
+
+  .navbar-center {
+    order: 2;  /* Move the navigation to the bottom */
+  }
+
   .navbar-right {
-    width: auto;  /* Adjust to the content */
+    order: 1;  /* Move the language toggle to the middle */
+    text-align: right;
+    padding-bottom: 10px;
   }
 
   .menu-icon {
-    display: block;
+    display: inline-block;
   }
 
   .navbar-list {
-    display: none;
     flex-direction: column;
     width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 70px;  /* Height of the navbar */
-    left: 0;
-    background-color: rgba(78, 99, 118, 0.871);
+    position: relative;  /* Not absolute */
+    top: unset;  /* Remove the fixed top position */
+    background-color: inherit;
   }
 
   .navbar-list.active {
@@ -82,9 +88,16 @@
   }
 
   .navbar-item {
-    padding: 10px 0;  /* More vertical padding, no horizontal padding */
+    padding: 10px 0;
   }
 }
+
+.language-label {
+  display: inline-block;  /* Display it inline with the language-toggle */
+  vertical-align: middle;
+  margin-left: 450px;  /* Adjust margin */
+}
+
 .navbar-right {
   position: relative;
   right: 10px;  /* Move more to the side */
@@ -140,9 +153,4 @@
 
 .language-toggle input:checked + .language-slider:before {
   transform: translateX(26px);
-}
-.language-label {
-  margin-left: 450px;
-  vertical-align: middle;
-  color: #ffffff;
 }

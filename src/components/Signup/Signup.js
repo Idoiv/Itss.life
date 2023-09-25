@@ -98,7 +98,7 @@ const handleSubmit = async (e) => {
 };
 
 return (
-  <div className="contact-container" style={{ backgroundImage: "url('/venice1.jpg')", backgroundSize: '100%' }}>
+  <div className="contact-container" dir={i18n.dir()} style={{ backgroundImage: "url('/venice1.jpg')", backgroundSize: '100%' }}>
     <div className="contact-form-container">
       <h1>{t('title')}</h1>
       <form onSubmit={handleSubmit}>

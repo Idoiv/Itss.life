@@ -1,3 +1,5 @@
+/* Original Styles */
+
 .intro-container {
   background: no-repeat center center fixed;
   background-size: cover;
@@ -42,6 +44,7 @@
 }
 
 /* Media Query for Mobile Responsiveness */
+
 @media (max-width: 768px) {
   .intro-container {
     padding: 50px 0;
@@ -55,4 +58,24 @@
   .intro-image img {
     max-width: 50%;
   }
+}
+
+/* Additional Styles for Right-to-Left */
+
+/* For English or left-to-right layout */
+.intro-text {
+  text-align: left;
+}
+
+.intro-content {
+  flex-direction: row;
+}
+
+/* For Hebrew or right-to-left layout */
+[dir="rtl"] .intro-text {
+  text-align: right;
+}
+
+[dir="rtl"] .intro-content {
+  flex-direction: row-reverse;
 }
