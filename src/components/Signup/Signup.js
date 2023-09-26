@@ -76,7 +76,7 @@ const Contact = () => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   if (validateFields()) {
-    const webhookUrl = 'https://hook.eu1.make.com/qvj83dnnkx6jfhrlwgxvmionkjileiri';
+    const webhookUrl = process.env.REACT_APP_WEBHOOK_URL;
     try {
       const response = await fetch(webhookUrl, {
         method: 'POST',

@@ -15,20 +15,27 @@
   flex-wrap: wrap;
 }
 
+/* Intro Text Container */
 .intro-text {
   flex: 1;
   padding: 20px;
   font-family: 'Rock Salt', cursive;
+  background: rgba(0, 0, 0, 0.6);  /* Semi-transparent background */
+  border-radius: 8px;  /* Rounded corners */
 }
 
+/* Intro Text */
 .intro-text h1 {
   font-size: 4rem;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #000;  /* Added text-shadow */
 }
 
 .intro-text p {
   font-size: 1.2rem;
   line-height: 1.6;
+  font-weight: bold;  /* Made text bold */
+  text-shadow: 1px 1px 3px #000;  /* Added text-shadow */
 }
 
 .intro-image {

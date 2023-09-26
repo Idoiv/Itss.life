@@ -5,17 +5,47 @@
 
 /* Your existing styles */
 .faq-container {
-  background-color: #70a985;
+  background-color: #547c8b;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
-.faq-title,
-.faq-question,
-.faq-answer {
+.faq-title {
   color: #ffffff;
   font-family: 'Nunito', sans-serif;
+  font-size: 3rem;  /* Increased font size */
+  text-align: center;  /* Centered text */
+  text-shadow: 2px 2px 4px #000000;  /* Text shadow for depth */
+  background: -webkit-linear-gradient(#eee, #333);  /* Gradient background */
+  -webkit-background-clip: text;
+  margin-bottom: 20px;
+  padding: 10px;  /* Added some padding */
+  border-radius: 8px;  /* Rounded corners */
 }
+/* FAQ Questions */
+.faq-question {
+  color: #f4f4f4;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px #000000;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 4px solid #000000;
+  border-radius: 4px;
+}
+
+/* FAQ Answers */
+.faq-answer {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
 .faq-layout {
   display: flex;

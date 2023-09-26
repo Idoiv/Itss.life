@@ -22,8 +22,8 @@
 }
 
 .navbar-logo {
-  max-height: 70px;
-  border-radius: 10px;
+  max-height: 65px;
+  border-radius: 0px;
 }
 
 .navbar-list {
@@ -100,7 +100,7 @@
   display: inline-block;
   width: 40px;  /* Reduced from 60px */
   height: 22px;  /* Reduced from 34px */
-  margin-left: 400px;
+  margin-left: 300px;
   margin-bottom: 15px;
 }
 
@@ -148,7 +148,7 @@
 
 /* Language label */
 .language-label {
-  margin-left: 410px;
+  margin-left: 310px;
   color: #ffffff;
   font-size: 1rem;
   margin-top: 5px;
