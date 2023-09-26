@@ -3,10 +3,11 @@ import './Faq.css';
 import { useTranslation } from 'react-i18next';
 
 const Faq = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'he'; // Assuming 'he' is the code for Hebrew
   
   return (
-    <div className="faq-container">
+    <div className={`faq-container ${isRTL ? 'rtl' : ''}`}>
       <h1 className="faq-title">{t('faq_title')}</h1>
 
       <div className="faq-layout">

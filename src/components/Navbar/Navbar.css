@@ -92,24 +92,16 @@
   }
 }
 
-.language-label {
-  display: inline-block;  /* Display it inline with the language-toggle */
-  vertical-align: middle;
-  margin-left: 450px;  /* Adjust margin */
-}
+/* ... Existing styles */
 
-.navbar-right {
-  position: relative;
-  right: 10px;  /* Move more to the side */
-}
-
-
+/* Language Toggle Switch */
 .language-toggle {
-  width: 60px;
-  height: 34px;
   position: relative;
   display: inline-block;
-  float: right;
+  width: 40px;  /* Reduced from 60px */
+  height: 22px;  /* Reduced from 34px */
+  margin-left: 400px;
+  margin-bottom: 15px;
 }
 
 .language-toggle input {
@@ -125,32 +117,41 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #373937;
-  border-radius: 17px;
+  background-color: #ccc;
   transition: 0.4s;
+  border-radius: 22px;  /* Adjusted to match new height */
 }
 
 .language-slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 18px;  /* Reduced from 26px */
+  width: 18px;  /* Reduced from 26px */
+  left: 2px;  /* Reduced from 4px */
+  bottom: 2px;  /* Reduced from 4px */
   background-color: white;
-  border-radius: 50%;
   transition: 0.4s;
-  color: #ffffff;
+  border-radius: 50%;
 }
 
 .language-toggle input:checked + .language-slider {
-  background-color: #000000;
+  background-color: #2196F3;
 }
 
 .language-toggle input:focus + .language-slider {
-  box-shadow: 0 0 1px #000000;
+  box-shadow: 0 0 1px #2196F3;
 }
 
 .language-toggle input:checked + .language-slider:before {
-  transform: translateX(26px);
+  transform: translateX(18px);  /* Reduced from 26px */
+}
+
+/* Language label */
+.language-label {
+  margin-left: 410px;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 5px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;  /* Changed from 'font' to 'font-family' */
 }

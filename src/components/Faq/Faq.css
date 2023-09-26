@@ -1,3 +1,9 @@
+/* RTL Support */
+.rtl {
+  direction: rtl;
+}
+
+/* Your existing styles */
 .faq-container {
   background-color: #70a985;
   padding: 20px;

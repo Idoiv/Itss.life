@@ -1,7 +1,7 @@
  {
-    "experience_thrill": "Experience the Thrill of Skate-Surfing!",
-    "skate_surfing_description": "Imagine the wind rushing past you as you carve your way through the streets. Feel the adrenaline pumping as you perform tricks you've only dreamed of. That's the magic of skate-surfing, and we want you to experience it.",
-    "schedule_session": "Schedule a Session",
+      "experience_thrill": "Experience the Thrill of Skate-Surfing!",
+      "skate_surfing_description": "Imagine the wind rushing past you as you carve your way through the streets. Feel the adrenaline pumping as you perform tricks you've only dreamed of. That's the magic of skate-surfing, and we want you to experience it.",
+      "schedule_session": "Schedule a Session",
       "home_title": "Home",
       "home_description": "Imagine the wind blowing past you as you ride your way outside. Feel the adrenaline pumping while doing tricks you've only dreamed of. We want you to experience it.",
       "about_me_title": "About Me",
@@ -59,7 +59,12 @@
       "groupDiscount_answer": "Yes, we offer discounts for groups of 3 or more.",
       "location_question": "Where is the session taking place?",
       "cancellationPolicy_question": "What is your cancellation policy?",
-      "cancellationPolicy_answer": "You can cancel up to 24 hours before the session for a full refund."
+      "cancellationPolicy_answer": "You can cancel up to 24 hours before the session for a full refund.",
+      "courses_title": "Courses Offered",
+      "private_lesson_title": "Private Lesson",
+      "private_lesson_description": "One-on-one instruction to enhance your skills.",
+      "group_lesson_title": "Group Lesson",
+      "group_lesson_description": "Learn with others in a fun, collaborative environment."
     }
   
   

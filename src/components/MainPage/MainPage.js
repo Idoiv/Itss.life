@@ -41,10 +41,6 @@ const MainPage = () => {
         </button>
       </div>
       
-      {/* With OutlineWrapper */}
-      <OutlineWrapper><EpicMoments /></OutlineWrapper>
-      <Footer />
-      
     </div>
   );
 };

@@ -7,6 +7,10 @@ import Introduction from './components/Introduction/Introduction';
 import MainPage from './components/MainPage/MainPage';
 import { LanguageProvider, useLanguage } from './LanguageContext';
 import Contact from './components/Signup/Signup';
+import Courses from './components/Courses/Courses';
+import EpicMoments from './components/EpicMoments/EpicMoments';
+import OutlineWrapper from './components/OutlineWrapper/OutlineWrapper';
+import Footer from './components/Footer/Footer';
 
 function LanguageWrapper() {
   const { lang } = useParams();
@@ -20,7 +24,12 @@ function LanguageWrapper() {
 
   return (
     <Routes>
-      <Route path="/" element={<MainPage />} />
+      <Route path="/" element={<>
+              <MainPage />
+              <OutlineWrapper><Courses /></OutlineWrapper>
+              <OutlineWrapper><EpicMoments /></OutlineWrapper>
+              <Footer />
+            </>} />
       <Route path="faq" element={<Faq />} />
       <Route path="aboutme" element={<Introduction />} />
       <Route path="signup" element={<Contact />} />

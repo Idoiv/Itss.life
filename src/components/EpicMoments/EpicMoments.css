@@ -9,6 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-size: 100%;
 }
 
 .epic-image {

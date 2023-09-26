@@ -61,6 +61,12 @@
   "groupDiscount_answer": "כן, אנו מציעים הנחות לקבוצות של 3 או יותר.",
   "location_question": "היכן מתקיים המפגש?",
   "cancellationPolicy_question": "מהי מדיניות הביטולים שלך?",
-  "cancellationPolicy_answer": "ניתן לבטל עד 24 שעות לפני הפגישה לקבלת החזר מלא."
+  "cancellationPolicy_answer": "ניתן לבטל עד 24 שעות לפני הפגישה לקבלת החזר מלא.",
+  "courses_title": "שיעורי סרף-סקייט : ",
+  "private_lesson_title": "שיעור פרטי",
+  "private_lesson_description": "הוראה פרטנית לשיפור המיומנויות שלך.",
+  "group_lesson_title": "שיעור קבוצתי",
+  "group_lesson_description": "למידה בסביבה כיפית ושיתופית עם אחרים."
+
   
 }
