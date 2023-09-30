@@ -60,6 +60,7 @@ const Navbar = () => {
             <input type="checkbox" checked={i18n.language === 'he'} onChange={changeLanguage} />
             <span className="language-slider"></span>
           </label>
+          
         </div>
       </div>
     </div>

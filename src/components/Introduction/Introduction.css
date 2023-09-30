@@ -52,22 +52,51 @@
 
 /* Media Query for Mobile Responsiveness */
 
+/* Original Styles */
+/* ... (No changes here) */
+
+/* Media Query for Mobile Responsiveness */
 @media (max-width: 768px) {
   .intro-container {
-    padding: 50px 0;
+    padding: 20px 0;  /* Reduced padding */
   }
+
+  .intro-content {
+    flex-direction: column;  /* Stack elements vertically */
+  }
+
+  .intro-text {
+    padding: 10px;  /* Reduced padding */
+    text-align: center;  /* Center align for better readability on small screens */
+  }
+
   .intro-text h1 {
-    font-size: 3rem;
+    font-size: 2rem;  /* Reduced font size */
+    margin-bottom: 10px;  /* Reduced margin */
   }
+
   .intro-text p {
-    font-size: 1rem;
+    font-size: 1rem;  /* Reduced font size */
+    line-height: 1.4;  /* Reduced line height */
   }
+
+  .intro-image {
+    padding: 10px;  /* Reduced padding */
+  }
+
   .intro-image img {
-    max-width: 50%;
+    max-width: 80%;  /* Increased to take up more space on small screens */
+  }
+
+  /* For Hebrew or right-to-left layout in mobile */
+  [dir="rtl"] .intro-text, [dir="ltr"] .intro-text {
+    text-align: center;  /* Center align text */
+  }
+
+  [dir="rtl"] .intro-content, [dir="ltr"] .intro-content {
+    flex-direction: column;  /* Stack elements vertically */
   }
 }
-
-/* Additional Styles for Right-to-Left */
 
 /* For English or left-to-right layout */
 .intro-text {

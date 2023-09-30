@@ -99,39 +99,45 @@ h1 {
 
 @media (max-width: 768px) {
   .contact-form-container {
-    max-width: 100%;
-    padding: 15px;
-    box-shadow: none;
+    max-width: 90%;  /* Changed to 90% for better screen usage */
+    padding: 10px;  /* Reduced padding */
   }
 
   .contact-container {
-    padding: 40px 10px;
+    padding: 30px 5px;  /* Reduced padding */
   }
 
   h1 {
-    font-size: 18px;
+    font-size: 18px;  /* Font size remains the same */
+    margin-bottom: 15px;  /* Reduced margin */
   }
 
   .form-group {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-
-  .btn-primary {
-    padding: 8px 16px;
-    font-size: 14px;
+    margin-bottom: 8px;  /* Reduced margin */
+    font-size: 16px;  /* Reduced font size */
   }
 
   .form-control {
-    padding: 8px;
+    padding: 8px;  /* Reduced padding */
+    font-size: 14px;  /* Reduced font size */
+  }
+
+  .btn-primary {
+    padding: 8px 12px;  /* Slightly reduced padding */
+    font-size: 14px;  /* Reduced font size */
   }
 
   .popup-content {
-    padding: 15px;
+    padding: 15px;  /* Padding remains the same */
   }
 
   .popup-button {
-    padding: 8px 16px;
+    padding: 8px 12px;  /* Slightly reduced padding */
+    font-size: 14px;  /* Reduced font size */
+  }
+  
+  .error-text {
+    font-size: 11px;  /* Slightly reduced font size */
   }
 }
 

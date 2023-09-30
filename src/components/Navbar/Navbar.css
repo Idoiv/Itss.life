@@ -1,5 +1,6 @@
+/* Existing Styles */
 .navbar {
-  background-color: rgba(78, 99, 118, 0.871);
+  background-color: rgba(0, 0, 0, 0.834);
   height: 70px;
 }
 
@@ -8,22 +9,21 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  padding: 0 40px;
+  padding: 0 2rem;
 }
 
 .navbar-left,
 .navbar-right {
-  width: 490px;
+  flex: 1;
 }
 
 .navbar-center {
-  flex: 1;
+  flex: 2;
   text-align: center;
 }
 
 .navbar-logo {
   max-height: 65px;
-  border-radius: 0px;
 }
 
 .navbar-list {
@@ -32,10 +32,11 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  margin-left: 120px;
 }
 
 .navbar-item {
-  padding: 0 15px;
+  padding: 0 1rem;
 }
 
 .navbar-link {
@@ -45,54 +46,10 @@
   text-decoration: none;
 }
 
-/* Menu icon styling */
 .menu-icon {
   display: none;
-  color: #ffffff;  /* Match the text color */
+  color: #ffffff;
 }
-
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column;  /* Stack elements vertically */
-    padding: 0 20px;
-  }
-
-  .navbar-left, .navbar-right, .navbar-center {
-    width: 100%;  /* Make it full width */
-  }
-
-  .navbar-center {
-    order: 2;  /* Move the navigation to the bottom */
-  }
-
-  .navbar-right {
-    order: 1;  /* Move the language toggle to the middle */
-    text-align: right;
-    padding-bottom: 10px;
-  }
-
-  .menu-icon {
-    display: inline-block;
-  }
-
-  .navbar-list {
-    flex-direction: column;
-    width: 100%;
-    position: relative;  /* Not absolute */
-    top: unset;  /* Remove the fixed top position */
-    background-color: inherit;
-  }
-
-  .navbar-list.active {
-    display: flex;
-  }
-
-  .navbar-item {
-    padding: 10px 0;
-  }
-}
-
-/* ... Existing styles */
 
 /* Language Toggle Switch */
 .language-toggle {
@@ -154,4 +111,55 @@
   margin-top: 5px;
   font-weight: bold;
   font-family: 'Raleway', sans-serif;  /* Changed from 'font' to 'font-family' */
+}
+
+/* Media Queries */
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-left,
+  .navbar-right,
+  .navbar-center {
+    width: auto;  /* No forced full width */
+  }
+
+  .navbar-logo {
+    max-height: auto;
+  }
+
+  .navbar-list {
+    white-space: nowrap;  /* Prevents wrapping */
+    overflow-x: auto;  /* Adds horizontal scroll */
+    -webkit-overflow-scrolling: touch;  /* Smooth scrolling for webkit */
+  }
+
+  .navbar-item {
+    padding: 0 0.5rem; 
+  }
+  
+  .language-toggle,
+  .language-label {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+/* Media Queries for landscape */
+@media screen and (orientation:landscape) and (max-width: 768px) {
+  .navbar-list {
+    overflow-x: scroll;
+    max-height: 50px;
+    white-space: nowrap;
+  }
+  .navbar-item {
+    padding: 0 0.3rem;
+  }
 }

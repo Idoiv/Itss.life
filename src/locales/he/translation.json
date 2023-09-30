@@ -15,7 +15,7 @@
   "fullName": "שם מלא",
   "phoneNumber": "מספר טלפון",
   "address": "כתובת",
-  "surfskateBoard": "יש לך סקייטבורד גלישה?",
+  "surfskateBoard": "יש לך סקייט-סרף ?",
   "ridingLevel": "רמת רכיבה",
   "signup":"הרשמה",
 
@@ -37,7 +37,7 @@
   "has_board": "יש לך סקייטבורד גלישה? ",
   "yes": "כן",
   "no": "לא",
-  "skill_level": "אני ",
+  "skill_level": "רמת הרכיבה שלי היא ",
   "beginner": "מתחיל",
   "intermediate": "בינוני",
   "advanced": "מתקדם",

@@ -21,7 +21,18 @@
 
 /* Media Query for Mobile Responsiveness */
 @media (max-width: 768px) {
+  .epic-moments {
+    /* Reduce padding */
+    padding: 10px;
+    /* Scale down font size */
+    font-size: 16px;
+    /* Adjust background if needed; You might also want to consider using a mobile-specific image */
+    background-size: cover;
+    background-position: center;
+  }
+  
   .epic-image {
+    /* Reduce image dimensions and margin */
     width: 150px;
     margin: 5px;
   }

@@ -11,6 +11,7 @@ import Courses from './components/Courses/Courses';
 import EpicMoments from './components/EpicMoments/EpicMoments';
 import OutlineWrapper from './components/OutlineWrapper/OutlineWrapper';
 import Footer from './components/Footer/Footer';
+import FloatingButton from './components/FloatingButton/FloatingButton';
 
 function LanguageWrapper() {
   const { lang } = useParams();
@@ -46,6 +47,7 @@ function App() {
           <Route path="/" element={<Navigate to="/en" />} /> {/* Redirect root to /en */}
           <Route path="/:lang/*" element={<LanguageWrapper />} />
         </Routes>
+        <FloatingButton />
       </Router>
     </LanguageProvider>
   );

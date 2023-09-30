@@ -10,7 +10,7 @@
   border-radius: 5px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  min-height: 1200px;
+  min-height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,23 +73,23 @@
 /* Media Queries */
 @media (max-width: 768px) {
   .skate-surfing-section {
-    padding: 20px;
-    min-height: 600px; /* Adjust according to your needs */
+    padding: 1rem;  /* Reduced fixed px to rem */
+    min-height: 50vh; /* Using viewport units */
   }
 
   .skate-surfing-section h1 {
-    font-size: 2rem; /* Reduced font size */
-    margin-bottom: 15px; /* Reduced margin */
+    font-size: 1.5rem; /* Reduced font size */
+    margin-bottom: 1rem; /* Using rem instead of fixed px */
   }
 
   .skate-surfing-section p {
     font-size: 1rem; /* Reduced font size */
-    line-height: 1.4; /* Reduced line height */
-    margin-bottom: 15px; /* Reduced margin */
+    line-height: 1.4;
+    margin-bottom: 1rem; /* Using rem instead of fixed px */
   }
 
   .skate-surfing-section button {
-    padding: 10px 20px; /* Reduced padding */
+    padding: 0.5rem 1rem; /* Reduced padding and using rem */
     font-size: 1rem; /* Reduced font size */
   }
 }

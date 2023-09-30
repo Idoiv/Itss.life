@@ -38,31 +38,30 @@ body {
   cursor: pointer;
 }
 
-/* Media Queries for Mobile Responsiveness */
-
 @media (max-width: 768px) {
   /* Body */
   body {
-    padding: 5px;
+    padding: 0;  /* Removed padding */
   }
 
   /* Outline */
   .outline {
-    margin: 10px;
-    padding: 15px;
+    margin: 5px;  /* Reduced margin */
+    padding: 10px;  /* Reduced padding */
+    border-radius: 5px;  /* Slightly rounded corners */
   }
 
   /* Navbar */
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;  /* Center items, since it's a column now */
+    padding: 5px;  /* Reduced padding */
   }
 
   /* Sidebar Toggle Button */
   .sidebar-toggle-button {
-    left: 10px;
-    top: 10px;
-    font-size: 18px;
+    left: 5px;  /* Moved closer to the edge */
+    top: 5px;  /* Moved closer to the top */
+    font-size: 16px;  /* Slightly reduced font size */
   }
 }

@@ -49,6 +49,35 @@
 .group-lesson {
   background: linear-gradient(to bottom right, #376896, #133a5b);
 }
+
 .rtl {
   direction: rtl;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .courses-container {
+    padding: 20px;
+  }
+
+  .courses-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .courses-list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .course-item {
+    flex: 1;
+    margin: 5px;
+    padding: 15px;
+  }
+
+  .course-item h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
 }

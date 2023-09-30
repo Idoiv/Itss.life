@@ -76,16 +76,24 @@
   background-color: #E1306C;
 }
 
-/* Media Query for Mobile Responsiveness */
+/* Existing Styles ... */
+
+/* 
 @media (max-width: 768px) {
   .floating-button {
-    bottom: 10px;
-    right: 10px;
+    bottom: 5px;  
+    right: 5px;  
   }
   
   .main-button,
   .icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;  
+    height: 30px;  
+    line-height: 30px; 
+  }
+
+  .social-icons {
+    bottom: 40px;  
   }
 }
+ */
